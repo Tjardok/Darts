@@ -1,19 +1,24 @@
 //Event for get table cell Id
 //document.getElementById("table").onclick = getCells;
 
-//
 
-  //  var tbl =
-   document.getElementById("table");
-    for (var i = 0; i < tbl.rows.length; i++) {
-        for (var j = 0; j < tbl.rows[i].cells.length; j++)
 
-            tbl.rows[i].cells[j].onclick = function () {
-                getval(this);
 
-            };
+    // document.getElementById("table").onclick = getCells;
+    var tbl = document.getElementById("table");
+     for (var i = 0; i < tbl.rows.length; i++) {
+         for (var j = 0; j < tbl.rows[i].cells.length; j++)
+ 
+             tbl.rows[i].cells[j].onclick = function () {
+                 getval(this);
+ 
+             };
+ 
+     }
 
-    }
+
+
+  
 
 
 
@@ -101,9 +106,9 @@ function getCheck() {
           }
 
 
-    }
+   }
 
-//}
+}
 
 
 function Minus(minCel) {
