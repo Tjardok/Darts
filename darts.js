@@ -98,7 +98,6 @@ function getNeighbours(cell) {
 document.getElementById("clear").onclick = clearScore;
 
 function clearScore() {
-
     var tbl = document.getElementById("table");
     for (var i = 0; i < tbl.rows.length; i++) {
 
@@ -111,4 +110,19 @@ function clearScore() {
 
             }
     }
+}
+
+
+//-------------------------------Function to add Player---------------------------------------------------//
+
+document.getElementById("add").onclick = removePlayer;
+
+function removePlayer()
+{
+	var allRows = document.getElementById('table').rows;
+	for (var i=0; i<allRows.length; i++) {
+		if (allRows[i].cells.length > 1) {
+			allRows[i].deleteCell(-1);
+		}
+	}
 }
