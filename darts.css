@@ -1,3 +1,5 @@
+
+
 h1 {
   font-family: Snippet;
   font-size: 100px;
@@ -97,7 +99,6 @@ table tr:last-child td:last-child {
 }
 
 
-
 /* Switch starts here */
 .rocker {
   display: inline-block;
@@ -110,7 +111,6 @@ table tr:last-child td:last-child {
   All sizes are in em - therefore
   changing the font-size here
   will change the size of the switch.
-  See .rocker-small below as example.
   */
  
  
@@ -119,7 +119,8 @@ table tr:last-child td:last-child {
   text-align: center;
   text-transform: uppercase;
   color: #888;
-  width: 7em;
+  width: 6.9em;
+ 
   height: 4em;
   overflow: hidden;
   border-bottom: 0.5em solid #eee;
@@ -129,10 +130,9 @@ table tr:last-child td:last-child {
 POSITION
 */
 position: absolute;
-  right: 90px;
+  right: 5vw;
   top: 115px;
 }
-
 
 .rocker::before {
   
@@ -147,7 +147,7 @@ position: absolute;
   border-bottom: 0;
   border-top-left-radius:  6px;
   border-top-right-radius:  6px;
-  ;
+  
   
   
 }
@@ -258,14 +258,14 @@ CLEAR BUTTON
 	display:inline-block;
   color:#ffffff;
 	font-family:Verdana;
-	font-size:29px;
+	font-size:120%;
 	font-weight:bolder;
-	padding:30px 60px;
+  padding: 2% 2.7%;
 	text-decoration:none;
   text-shadow:0px 1px 0px #854629;
   position: absolute;
-  right: 90px;
-  top: 260px;
+  right: 5vw;
+  top: 13.6vw;
 
 
 }

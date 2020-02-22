@@ -1,40 +1,64 @@
-//Event for get table cell Id
-    var tbl = document.getElementById("table");
-    for (var i = 0; i < tbl.rows.length; i++) {
-        for (var j = 0; j < tbl.rows[i].cells.length; j++)
+//Event for get table cell Id  
+var tbl = document.getElementById("table");
+for (var i = 0; i < tbl.rows.length; i++) {
+    for (var j = 0; j < tbl.rows[i].cells.length; j++)
+        tbl.rows[i].cells[j].onclick = function () {
+            getval(this);
 
-            tbl.rows[i].cells[j].onclick = function () {
-                getval(this);
+        }
+}
 
-            };
 
-    }
 
 function getval(cel) {
+    var check = document.getElementById("myCheck").checked;
+    console.log(check);
 
-    switch (cel.innerHTML) {
+    if (check == true) {
 
-        case '':
-            cel.innerHTML = 1;
-            cel.style.backgroundColor = 'red';
-            break;
 
-        case '1':
-            cel.innerHTML = 11;
-            cel.style.backgroundColor = 'orange';
-            break;
+        switch (cel.innerHTML) {
+            // +1 situation
+            case '':
+                cel.innerHTML = 1;
+                cel.style.backgroundColor = 'red';
+                break;
 
-        case '11':
-            cel.innerHTML = 111;
-            cel.style.backgroundColor = 'green';
-            alert('LEKKER PENIS');
-            break;
+            case '1':
+                cel.innerHTML = 11;
+                cel.style.backgroundColor = 'orange';
+                break;
 
-        case '111':
-            getNeighbours(cel);
+            case '11':
+                cel.innerHTML = 111;
+                cel.style.backgroundColor = 'green';
+                alert('LEKKER PENIS');
+                break;
 
-            break;
+            case '111':
+                getNeighbours(cel);
+                break;
+        }
 
+    } else {
+          switch (cel.innerHTML) {
+            //-1 situation    
+            case '1':
+                cel.innerHTML = "";
+                cel.style.backgroundColor = 'unset';
+                break;
+
+            case '11':
+                cel.innerHTML = 1;
+                cel.style.backgroundColor = 'red';
+                break;
+
+            case '111':
+                cel.innerHTML = 11;
+                cel.style.backgroundColor = 'orange';
+                break;
+
+        }
     }
 
 }
@@ -70,55 +94,7 @@ function getNeighbours(cell) {
 
 }
 
-//------------------------ functions to undo wrong score ------------------------------------///
-var checked = document.getElementById("myCheck").checked;
-document.getElementById("myCheck").onchange = getCheck;
-console.log(checked);
-//checked == false 
 
-function getCheck() {
-    console.log('getCheck');
-    var check = document.getElementById("myCheck").checked;
-    // console.log(check);
-    if (check == false) {
-        var tbl = document.getElementById("table");
-        for (var i = 0; i < tbl.rows.length; i++) {
-            for (var j = 0; j < tbl.rows[i].cells.length; j++)
-                tbl.rows[i].cells[j].onclick = function () {
-                    Minus(this)
-
-             }
-
-        }
-
-    }
-
-    else if (check == true) {
-        getCells();
-    }
-}
-
-
-function Minus(minCel) {
-    switch (minCel.innerHTML) {
-
-        case '1':
-            minCel.innerHTML = "";
-            minCel.style.backgroundColor = 'unset';
-            break;
-
-        case '11':
-            minCel.innerHTML = 1;
-            minCel.style.backgroundColor = 'red';
-            break;
-
-        case '111':
-            minCel.innerHTML = 11;
-            minCel.style.backgroundColor = 'orange';
-            break;
-      }
-
-}
 
 //-------------------------------Functions to CLEAR score ---------------------------------------------//
 document.getElementById("clear").onclick = clearScore;
@@ -135,6 +111,6 @@ function clearScore() {
                 x.innerHTML = "";
                 x.style.backgroundColor = 'unset';
 
-           }
+            }
     }
 }
