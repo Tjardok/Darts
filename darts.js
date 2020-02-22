@@ -12,8 +12,6 @@ for (var i = 0; i < tbl.rows.length; i++) {
 
 function getval(cel) {
     var check = document.getElementById("myCheck").checked;
-    console.log(check);
-
     if (check == true) {
 
 
