@@ -1,17 +1,25 @@
 //Event for get table cell Id  
-var tbl = document.getElementById("table");
+//var tbl = document.getElementById("table").onclick = getTable();
+
+//function getTable() {
+  
+   var tbl = document.getElementById("table");
+   console.log('start');
 for (var i = 0; i < tbl.rows.length; i++) {
     for (var j = 0; j < tbl.rows[i].cells.length; j++)
-        tbl.rows[i].cells[j].onclick = function () {
+      tbl.rows[i].cells[j].onclick = function () {
             getval(this);
+            console.log(this);
+
 
         }
 }
-
+//}
 
 
 function getval(cel) {
     var check = document.getElementById("myCheck").checked;
+    console.log(cel);
     if (check == true) {
 
 
@@ -32,9 +40,11 @@ function getval(cel) {
                 cel.style.backgroundColor = 'green';
                 alert('LEKKER PENIS');
                 break;
+             
 
             case '111':
                 getNeighbours(cel);
+                console.log(this);
                 break;
         }
 
@@ -62,6 +72,8 @@ function getval(cel) {
 }
 
 function getNeighbours(cell) {
+    console.log(cell);
+    
 
     var row = cell.parentNode.rowIndex;
 
@@ -111,4 +123,45 @@ function clearScore() {
 
             }
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+
+
+//-------------------------------Functios to add and remove Player---------------------------------------------------//
+
+document.getElementById("remove").onclick = removePlayer;
+
+function removePlayer(){
+	var allRows = document.getElementById('table').rows;
+	for (var i=0; i<allRows.length; i++) {
+		if (allRows[i].cells.length > 1) {
+			allRows[i].deleteCell(-1);
+		}
+	}
+}
+
+
+
+document.getElementById("add").onclick = addPlayer;
+
+function addPlayer() {
+    [...document.querySelectorAll('#table tr')].forEach((row, i) => {
+       
+        
+        let cell = document.createElement(i ? "td" : "th")
+        cell.setAttribute('contenteditable', 'true')
+         cell.setAttribute('onclick', 'true' );
+        row.appendChild(cell)
+       // cell.onclick = getTable(cell);
+
+
+
+
+    });
+ }
+
+ 
+
+>>>>>>> Stashed changes
