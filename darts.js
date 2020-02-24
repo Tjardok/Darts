@@ -1,7 +1,8 @@
 //Event for get table cell Id  
-//var tbl = document.getElementById("table").onclick = getTable();
+var tbl = document.getElementById("table").onclick = getTable();
+//document.getElementById("table");
 
-//function getTable() {
+function getTable() {
   
    var tbl = document.getElementById("table");
    console.log('start');
@@ -14,7 +15,7 @@ for (var i = 0; i < tbl.rows.length; i++) {
 
         }
 }
-//}
+}
 
 
 function getval(cel) {
@@ -74,7 +75,7 @@ function getval(cel) {
 function getNeighbours(cell) {
     console.log(cell);
     
-
+    var tbl = document.getElementById("table");
     var row = cell.parentNode.rowIndex;
 
     for (var i = 0; i < tbl.rows[row].cells.length; i++) {
@@ -167,7 +168,7 @@ function addPlayer() {
         cell.setAttribute('contenteditable', 'true')
          cell.setAttribute('onclick', 'true' );
         row.appendChild(cell)
-       // cell.onclick = getTable(cell);
+        cell.onclick = getTable(cell);
 
 
 
