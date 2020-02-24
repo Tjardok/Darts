@@ -123,9 +123,7 @@ function clearScore() {
 
             }
     }
-<<<<<<< Updated upstream
 }
-=======
 }
 
 
@@ -154,7 +152,7 @@ function addPlayer() {
         cell.setAttribute('contenteditable', 'true')
          cell.setAttribute('onclick', 'true' );
         row.appendChild(cell)
-       // cell.onclick = getTable(cell);
+        cell.onclick = getTable(cell);
 
 
 
@@ -164,4 +162,3 @@ function addPlayer() {
 
  
 
->>>>>>> Stashed changes
