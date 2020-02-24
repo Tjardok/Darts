@@ -124,10 +124,25 @@ function clearScore() {
             }
     }
 }
-}
+
 
 
 //-------------------------------Functios to add and remove Player---------------------------------------------------//
+
+document.getElementById("remove").onclick = removePlayer;
+
+function removePlayer(){
+	var allRows = document.getElementById('table').rows;
+	for (var i=0; i<allRows.length; i++) {
+		if (allRows[i].cells.length > 1) {
+			allRows[i].deleteCell(-1);
+		}
+	}
+}
+
+
+
+//-------------------------------Functions to add and remove Player---------------------------------------------------//
 
 document.getElementById("remove").onclick = removePlayer;
 
@@ -146,19 +161,18 @@ document.getElementById("add").onclick = addPlayer;
 
 function addPlayer() {
     [...document.querySelectorAll('#table tr')].forEach((row, i) => {
-       
-        
+
+
         let cell = document.createElement(i ? "td" : "th")
         cell.setAttribute('contenteditable', 'true')
          cell.setAttribute('onclick', 'true' );
         row.appendChild(cell)
-        cell.onclick = getTable(cell);
+       // cell.onclick = getTable(cell);
 
 
 
 
     });
  }
-
  
 

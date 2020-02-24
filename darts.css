@@ -269,3 +269,47 @@ CLEAR BUTTON
 
 
 }
+
+.addPlayer {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, red 100%);
+	background-color: blue;
+	border-radius:3px;
+	border:1px solid blue;
+	display:inline-block;
+  color:#ffffff;
+	font-family:Verdana;
+	font-size:120%;
+	font-weight:bolder;
+  padding: 2% 2.7%;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #854629;
+  position: absolute;
+  right: 5vw;
+  top: 18.9vw;
+
+
+}
+
+
+
+.removePlayer {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, red 100%);
+	background-color:black;
+	border-radius:3px;
+	border:1px solid black;
+	display:inline-block;
+  color:#ffffff;
+	font-family:Verdana;
+	font-size:88%;
+	font-weight:bolder;
+  padding: 2% 2.7%;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #854629;
+  position: absolute;
+  right: 5vw;
+  top: 24.1vw;
+
+
+}
