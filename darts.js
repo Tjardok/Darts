@@ -1,5 +1,14 @@
 //Event for get table cell Id  
+<<<<<<< Updated upstream
 var tbl = document.getElementById("table");
+=======
+var tbl = document.getElementById("table").onclick = getTable();
+
+//function getTable() {
+  
+   var tbl = document.getElementById("table");
+   console.log('start');
+>>>>>>> Stashed changes
 for (var i = 0; i < tbl.rows.length; i++) {
     for (var j = 0; j < tbl.rows[i].cells.length; j++)
         tbl.rows[i].cells[j].onclick = function () {
@@ -111,6 +120,10 @@ function clearScore() {
             }
     }
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 
 //-------------------------------Function to add Player---------------------------------------------------//
