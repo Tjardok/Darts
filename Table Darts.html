@@ -6,7 +6,7 @@
   <title>King of Darts</title>
   <script async src="darts.js"></script>
   <link rel="stylesheet" type="text/css" href="darts.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </style>
 
@@ -16,6 +16,31 @@
 
 <body>
 
+
+<!-----
+
+ <img id="theImage" src="WINST.jpg">
+
+-->
+
+
+<!-- The Modal
+
+
+
+
+-->
+  
+<img id="myImg" src="WINST.jpg" alt="DIKKE WINST MAAT!!!" style="width:100%;max-width:300px">
+
+
+<div id="myModal" class="modal">
+
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+  
 
 <!-------------------------Buttonsssssss--------------------------------->
 
@@ -32,21 +57,24 @@
   <a href="#" class="myButton" id="clear">CLEAR ALL</a>
   <a href="#" class="removePlayer" id="remove">remove player</a>
   <a href="#" class="addPlayer" id="add">add player</a>
-
+  <a href="#" class="fullscreen" id="fullscreen">Fullscreen</a>
 </div>
 
   
 <!------------------------------Table------------------------------------>
 
   <div class="container">
+    
+
     <h1>King of Darts</h1>
 
     <p id="info"></p>
 
     <div class="table-editable" style="overflow-x:auto;">
+     
       <table id="table" class="table">
         <tr>
-          <th id='test'>NUM</th>
+          <th id='NUM'>NUM</th>
           <th id='naam' contenteditable="true">Naam</th>
           <th id='naam' contenteditable="true">Naam</th>
           <th id='naam' contenteditable="true">Naam</th>
