@@ -9,7 +9,7 @@ function getTable() {
         for (var j = 0; j < tbl.rows[i].cells.length; j++)
             tbl.rows[i].cells[j].onclick = function () {
                 getval(this);
-                getCount();
+                getTotalCount();
 
 
             }
@@ -37,7 +37,7 @@ function getval(cel) {
             case '11':
                 cel.innerHTML = 111;
                 cel.style.backgroundColor = 'green';
-                alert('LEKKER PENIS');
+                getCelCount(cel);
                 break;
 
 
@@ -68,6 +68,29 @@ function getval(cel) {
     }
 
 }
+
+function getCelCount(colcell) {
+    var collindex = colcell.cellIndex;
+    var cellTags = document.getElementsByTagName('th');
+
+    for (i = 0; i < cellTags.length; i++) {
+
+
+        if (i == collindex) {
+            var Counter = cellTags[i].id;
+            var id = document.getElementById(Counter);
+            var x = 0;
+            
+            var y = +x + 1;
+            
+            id.innerHTML = id.innerHTML + y;
+           
+        }
+    }
+
+
+}
+
 
 function getNeighbours(cell) {
     var tbl = document.getElementById("table");
@@ -245,10 +268,10 @@ function closeFullscreen() {
 
 //-------------------------- Table value count function -----------------------//
 
-function getCount() {
+function getTotalCount() {
 
     var table = document.getElementById('table'),
-    sumVal1 = 0;
+        sumVal1 = 0;
     sumVal2 = 0;
     sumVal3 = 0;
     sumVal4 = 0;
@@ -263,7 +286,7 @@ function getCount() {
         openFullImage();
     }
 
-  
+
     if (sumVal2 == '0111111111111111111111111111111111111') {
         openFullImage();
 
