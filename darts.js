@@ -75,8 +75,7 @@ var x4 = 1;
 
 function getCelCount(colcell) {
     var collindex = colcell.cellIndex;
-    //  var cellTags = document.getElementsByTagName('th');
-    switch (collindex) {
+        switch (collindex) {
 
         case 1:
             var y = x1++;
@@ -109,9 +108,6 @@ function getCelCount(colcell) {
 
 
 }
-
-
-
 
 
 
