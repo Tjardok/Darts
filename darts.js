@@ -68,28 +68,51 @@ function getval(cel) {
     }
 
 }
+var x1 = 1;
+var x2 = 1;
+var x3 = 1;
+var x4 = 1;
 
 function getCelCount(colcell) {
     var collindex = colcell.cellIndex;
-    var cellTags = document.getElementsByTagName('th');
+    //  var cellTags = document.getElementsByTagName('th');
+    switch (collindex) {
 
-    for (i = 0; i < cellTags.length; i++) {
+        case 1:
+            var y = x1++;
+            var count1 = document.getElementById('1');
+            count1.innerHTML = y;
+            break;
 
 
-        if (i == collindex) {
-            var Counter = cellTags[i].id;
-            var id = document.getElementById(Counter);
-            var x = 0;
-            
-            var y = +x + 1;
-            
-            id.innerHTML = id.innerHTML + y;
-           
-        }
+        case 2:
+            var y = x2++;
+            var count1 = document.getElementById('2');
+            count1.innerHTML = y;
+            break;
+
+
+        case 3:
+            var y = x3++;
+            var count1 = document.getElementById('3');
+            count1.innerHTML = y;
+            break;
+
+
+        case 4:
+            var y = x4++;
+            var count1 = document.getElementById('4');
+            count1.innerHTML = y;
+            break;
+
     }
 
 
 }
+
+
+
+
 
 
 function getNeighbours(cell) {
@@ -248,7 +271,7 @@ document.getElementById("myImg").onclick = closeFullscreen;
 
 /* Close fullscreen */
 function closeFullscreen() {
-    document.getElementById("myImg").style.display = "none";
+    //document.getElementById("myImg").style.display = "none";
 
     if (document.exitFullscreen) {
         document.exitFullscreen();
