@@ -80,28 +80,28 @@ function getCelCount(colcell) {
         case 1:
             var y = x1++;
             var count1 = document.getElementById('1');
-            count1.innerHTML = y;
+            count1.innerHTML = y + '/12';
             break;
 
 
         case 2:
             var y = x2++;
             var count1 = document.getElementById('2');
-            count1.innerHTML = y;
+            count1.innerHTML = y + '/12';
             break;
 
 
         case 3:
             var y = x3++;
             var count1 = document.getElementById('3');
-            count1.innerHTML = y;
+            count1.innerHTML = y + '/12';
             break;
 
 
         case 4:
             var y = x4++;
             var count1 = document.getElementById('4');
-            count1.innerHTML = y;
+            count1.innerHTML = y + '/12';
             break;
 
     }
@@ -267,7 +267,7 @@ document.getElementById("myImg").onclick = closeFullscreen;
 
 /* Close fullscreen */
 function closeFullscreen() {
-    //document.getElementById("myImg").style.display = "none";
+    document.getElementById("myImg").style.display = "none";
 
     if (document.exitFullscreen) {
         document.exitFullscreen();
@@ -301,21 +301,24 @@ function getTotalCount() {
         sumVal4 = sumVal4 + table.rows[i].cells[4].innerHTML;
 
     }
-    if (sumVal1 == '0111111111111111111111111111111111111') {
+
+    console.log(sumVal1);
+    if (sumVal1 == '011111111111111111111111111111111111112/12') {
+        console.log(sumVal1);
         openFullImage();
     }
 
 
-    if (sumVal2 == '0111111111111111111111111111111111111') {
+    if (sumVal2 == '011111111111111111111111111111111111112/12') {
         openFullImage();
 
     }
-    if (sumVal3 == '0111111111111111111111111111111111111') {
+    if (sumVal3 == '011111111111111111111111111111111111112/12') {
         openFullImage();
 
     }
 
-    if (sumVal4 == '0111111111111111111111111111111111111') {
+    if (sumVal4 == '011111111111111111111111111111111111112/12') {
         openFullImage();
 
     }
