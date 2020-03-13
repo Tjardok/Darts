@@ -203,6 +203,7 @@ function addPlayer() {
 
         let cell = document.createElement(i ? "td" : "th")
         cell.setAttribute('contenteditable', 'true')
+        //cell.createTextNode('Naam');
         row.appendChild(cell)
 
         cell.onclick = getTable(cell);
@@ -218,6 +219,7 @@ function addPlayer() {
 document.getElementById("myImg").style.display = "none";
 
 function openFullImage() {
+    console.log('test');
     document.getElementById("myImg").style.display = "block";
     var elem = document.getElementById("myImg");
     if (elem.requestFullscreen) {
@@ -294,6 +296,7 @@ function getTotalCount() {
     sumVal2 = 0;
     sumVal3 = 0;
     sumVal4 = 0;
+    endValue = 011111111111111111111111111111111111112; 
     for (var i = 1; i < table.rows.length; i++) {
         sumVal1 = sumVal1 + table.rows[i].cells[1].innerHTML;
         sumVal2 = sumVal2 + table.rows[i].cells[2].innerHTML;
@@ -303,22 +306,22 @@ function getTotalCount() {
     }
 
     console.log(sumVal1);
-    if (sumVal1 == '011111111111111111111111111111111111112/12') {
+    if (sumVal1 == '011111111111111111111111111111111111112' ) {
         console.log(sumVal1);
         openFullImage();
     }
 
 
-    if (sumVal2 == '011111111111111111111111111111111111112/12') {
+    if (sumVal2 == endValue) {
         openFullImage();
 
     }
-    if (sumVal3 == '011111111111111111111111111111111111112/12') {
+    if (sumVal3 == endValue) {
         openFullImage();
 
     }
 
-    if (sumVal4 == '011111111111111111111111111111111111112/12') {
+    if (sumVal4 == endValue) {
         openFullImage();
 
     }
