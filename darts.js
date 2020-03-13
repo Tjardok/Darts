@@ -296,7 +296,7 @@ function getTotalCount() {
     sumVal2 = 0;
     sumVal3 = 0;
     sumVal4 = 0;
-    endValue = 011111111111111111111111111111111111112; 
+   
     for (var i = 1; i < table.rows.length; i++) {
         sumVal1 = sumVal1 + table.rows[i].cells[1].innerHTML;
         sumVal2 = sumVal2 + table.rows[i].cells[2].innerHTML;
@@ -312,16 +312,16 @@ function getTotalCount() {
     }
 
 
-    if (sumVal2 == endValue) {
+    if (sumVal2 == '011111111111111111111111111111111111112') {
         openFullImage();
 
     }
-    if (sumVal3 == endValue) {
+    if (sumVal3 == '011111111111111111111111111111111111112') {
         openFullImage();
 
     }
 
-    if (sumVal4 == endValue) {
+    if (sumVal4 == '011111111111111111111111111111111111112') {
         openFullImage();
 
     }
